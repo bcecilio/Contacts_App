@@ -37,5 +37,25 @@ class ContactCell: UIView {
     private func commonInit() {
         
     }
+    
+    private func setupImage() {
+        addSubview(contactPicture)
+        contactPicture.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contactPicture.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            contactPicture.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            contactPicture.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            contactPicture.trailingAnchor.constraint(equalTo: nameLabel.leadingAnchor, constant: 10)
+        ])
+    }
+    
+    private func setupName() {
+        addSubview(nameLabel)
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: contactPicture.trailingAnchor, constant: 10)
+        ])
+    }
 
 }
