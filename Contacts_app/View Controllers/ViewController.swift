@@ -17,12 +17,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view = contactView
         setupTableView()
+        getContacts()
     }
     
     func setupTableView() {
         contactView.tableView.delegate = self
         contactView.tableView.dataSource = self
         contactView.tableView.register(ContactCell.self, forCellReuseIdentifier: "contactCell")
+    }
+    
+    func getContacts() {
+        contacts = Contacts.getContacts()
     }
 
 }
@@ -33,9 +38,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell") as? TableViewCell else {
+            fatalError("could not dequeue tableViewCell")
+        }
+        let newContacts = contacts[indexPath.row]
+        cell.configureCell(with: newContacts)
+        return cell
     }
-    
-    
 }
 

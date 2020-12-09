@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B76C6ABE2581901000E2A21C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C6ABD2581901000E2A21C /* TableViewCell.swift */; };
 		B76FC197257D4FAD008CC2EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FC196257D4FAD008CC2EE /* TabBarController.swift */; };
 		B7C2448D256B380000EB1751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2448C256B380000EB1751 /* AppDelegate.swift */; };
 		B7C2448F256B380000EB1751 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2448E256B380000EB1751 /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B76C6ABD2581901000E2A21C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B76FC196257D4FAD008CC2EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B7C24489256B380000EB1751 /* Contacts_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2448C256B380000EB1751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				B7C244D6256B46E500EB1751 /* ContactListView.swift */,
 				B7C244FE256B48E000EB1751 /* ContactCell.swift */,
+				B76C6ABD2581901000E2A21C /* TableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				B7C244C7256B38A900EB1751 /* Contacts.swift in Sources */,
 				B76FC197257D4FAD008CC2EE /* TabBarController.swift in Sources */,
 				B7C24491256B380000EB1751 /* ViewController.swift in Sources */,
+				B76C6ABE2581901000E2A21C /* TableViewCell.swift in Sources */,
 				B7C2448D256B380000EB1751 /* AppDelegate.swift in Sources */,
 				B7C244D7256B46E500EB1751 /* ContactListView.swift in Sources */,
 				B7C2448F256B380000EB1751 /* SceneDelegate.swift in Sources */,

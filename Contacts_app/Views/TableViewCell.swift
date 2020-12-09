@@ -1,14 +1,24 @@
 //
-//  ContactCell.swift
+//  TableViewCell.swift
 //  Contacts_app
 //
-//  Created by Brendon Cecilio on 11/22/20.
+//  Created by Brendon Cecilio on 12/9/20.
 //
 
 import UIKit
 
-class ContactCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
     
+    var data: Contacts? {
+        didSet {
+            guard let data = data else {
+                return
+            }
+            self.nameLabel.text = data.contactName
+            self.numberLabel.text = String(data.contactNumber)
+        }
+    }
+
     public lazy var nameLabel: UILabel = {
         let label = UILabel()
         return label
@@ -58,4 +68,8 @@ class ContactCell: UITableViewCell {
         ])
     }
 
+    public func configureCell(with contact: Contacts) {
+        nameLabel.text = contact.contactName
+        numberLabel.text = String(contact.contactNumber)
+    }
 }
