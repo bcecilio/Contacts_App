@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72E28102583FD5400A9ED8A /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E280F2583FD5400A9ED8A /* DetailController.swift */; };
+		B72E28152583FD6800A9ED8A /* FavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E28142583FD6800A9ED8A /* FavController.swift */; };
 		B76C6ABE2581901000E2A21C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C6ABD2581901000E2A21C /* TableViewCell.swift */; };
 		B76FC197257D4FAD008CC2EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FC196257D4FAD008CC2EE /* TabBarController.swift */; };
 		B7C2448D256B380000EB1751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2448C256B380000EB1751 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B72E280F2583FD5400A9ED8A /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		B72E28142583FD6800A9ED8A /* FavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavController.swift; sourceTree = "<group>"; };
 		B76C6ABD2581901000E2A21C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B76FC196257D4FAD008CC2EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B7C24489256B380000EB1751 /* Contacts_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +121,7 @@
 		B7C2448B256B380000EB1751 /* Contacts_app */ = {
 			isa = PBXGroup;
 			children = (
-				B7C244D0256B38C900EB1751 /* View Controllers */,
+				B7C244D0256B38C900EB1751 /* Controllers */,
 				B76FC192257D4F49008CC2EE /* Contacts */,
 				B7C244D5256B46CF00EB1751 /* Views */,
 				B7C24495256B380000EB1751 /* Assets.xcassets */,
@@ -155,14 +159,16 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B7C244D0256B38C900EB1751 /* View Controllers */ = {
+		B7C244D0256B38C900EB1751 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				B7C24490256B380000EB1751 /* ViewController.swift */,
 				B76FC196257D4FAD008CC2EE /* TabBarController.swift */,
 				B7C244CB256B38C400EB1751 /* NewContactController.swift */,
+				B72E280F2583FD5400A9ED8A /* DetailController.swift */,
+				B72E28142583FD6800A9ED8A /* FavController.swift */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B7C244D5256B46CF00EB1751 /* Views */ = {
@@ -312,6 +318,8 @@
 				B7C244D7256B46E500EB1751 /* ContactListView.swift in Sources */,
 				B7C2448F256B380000EB1751 /* SceneDelegate.swift in Sources */,
 				B7C244FF256B48E000EB1751 /* ContactCell.swift in Sources */,
+				B72E28102583FD5400A9ED8A /* DetailController.swift in Sources */,
+				B72E28152583FD6800A9ED8A /* FavController.swift in Sources */,
 				B7C244CC256B38C400EB1751 /* NewContactController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
