@@ -30,7 +30,6 @@ class ViewController: UIViewController {
     func getContacts() {
         contacts = Contacts.getContacts()
     }
-
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {

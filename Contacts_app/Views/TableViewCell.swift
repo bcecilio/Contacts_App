@@ -45,7 +45,9 @@ class TableViewCell: UITableViewCell {
     }
     
     private func commonInit() {
-        
+        setupImage()
+        setupName()
+        setupNumber()
     }
     
     private func setupImage() {
@@ -53,9 +55,9 @@ class TableViewCell: UITableViewCell {
         contactPicture.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             contactPicture.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            contactPicture.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            contactPicture.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             contactPicture.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            contactPicture.trailingAnchor.constraint(equalTo: nameLabel.leadingAnchor, constant: 10)
+//            contactPicture.trailingAnchor.constraint(equalTo: nameLabel.leadingAnchor, constant: 10)
         ])
     }
     
@@ -63,8 +65,18 @@ class TableViewCell: UITableViewCell {
         addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             nameLabel.leadingAnchor.constraint(equalTo: contactPicture.trailingAnchor, constant: 10)
+        ])
+    }
+    
+    private func setupNumber() {
+        addSubview(numberLabel)
+        numberLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            numberLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
+            numberLabel.leadingAnchor.constraint(equalTo: contactPicture.trailingAnchor, constant: 10)
         ])
     }
 
