@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = contactView
+        contactView.backgroundColor = .systemOrange
         setupTableView()
         getContacts()
     }
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
     func setupTableView() {
         contactView.tableView.delegate = self
         contactView.tableView.dataSource = self
-        contactView.tableView.register(ContactCell.self, forCellReuseIdentifier: "contactCell")
+        contactView.tableView.register(TableViewCell.self, forCellReuseIdentifier: "contactCell")
     }
     
     func getContacts() {
