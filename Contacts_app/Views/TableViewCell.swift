@@ -31,6 +31,7 @@ class TableViewCell: UITableViewCell {
     
     public lazy var contactPicture: UIImageView = {
         let image = UIImageView()
+        image.image = UIImage(systemName: "person")
         return image
     }()
     
@@ -54,9 +55,10 @@ class TableViewCell: UITableViewCell {
         addSubview(contactPicture)
         contactPicture.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            contactPicture.centerXAnchor.constraint(equalTo: centerXAnchor),
+            contactPicture.centerYAnchor.constraint(equalTo: centerYAnchor),
             contactPicture.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             contactPicture.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+//            contactPicture.widthAnchor.constraint(equalTo: widthAnchor, constant: 5)
 //            contactPicture.trailingAnchor.constraint(equalTo: nameLabel.leadingAnchor, constant: 10)
         ])
     }
