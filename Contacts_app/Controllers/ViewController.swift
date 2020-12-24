@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         contactView.tableView.delegate = self
         contactView.tableView.dataSource = self
         contactView.tableView.register(TableViewCell.self, forCellReuseIdentifier: "contactCell")
+        // resizing cells
+        contactView.tableView.estimatedRowHeight = 100.0
+        contactView.tableView.rowHeight = UITableView.automaticDimension
     }
     
     func getContacts() {
@@ -44,6 +47,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let newContacts = contacts[indexPath.row]
         cell.configureCell(with: newContacts)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
 }
 

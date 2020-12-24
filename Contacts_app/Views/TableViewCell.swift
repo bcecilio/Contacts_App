@@ -32,8 +32,15 @@ class TableViewCell: UITableViewCell {
     public lazy var contactPicture: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(systemName: "person")
+//        let screenSize: CGRect = UIScreen.main.bounds
+        image.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         return image
     }()
+    
+//    override var intrinsicContentSize: CGSize {
+//        let height = min(contentSize.height, maxHeight)
+//        return CGSize(width: contentSize.width, height: height)
+//      }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -55,10 +62,10 @@ class TableViewCell: UITableViewCell {
         addSubview(contactPicture)
         contactPicture.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            contactPicture.centerYAnchor.constraint(equalTo: centerYAnchor),
-            contactPicture.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+//            contactPicture.centerYAnchor.constraint(equalTo: centerYAnchor),
+            contactPicture.topAnchor.constraint(equalTo: topAnchor, constant: 35),
             contactPicture.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-//            contactPicture.widthAnchor.constraint(equalTo: widthAnchor, constant: 5)
+//            contactPicture.widthAnchor.constraint(equalTo: widthAnchor, constant: 2)
 //            contactPicture.trailingAnchor.constraint(equalTo: nameLabel.leadingAnchor, constant: 10)
         ])
     }
@@ -69,7 +76,7 @@ class TableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            nameLabel.leadingAnchor.constraint(equalTo: contactPicture.trailingAnchor, constant: 10)
+            nameLabel.leadingAnchor.constraint(equalTo: contactPicture.trailingAnchor, constant: 20)
         ])
     }
     
@@ -77,8 +84,9 @@ class TableViewCell: UITableViewCell {
         addSubview(numberLabel)
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            numberLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
-            numberLabel.leadingAnchor.constraint(equalTo: contactPicture.trailingAnchor, constant: 10)
+            numberLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 1),
+            numberLabel.leadingAnchor.constraint(equalTo: contactPicture.trailingAnchor, constant: 20),
+            numberLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 1)
         ])
     }
 
