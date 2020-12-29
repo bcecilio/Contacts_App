@@ -30,6 +30,10 @@ class ViewController: UIViewController {
         contactView.tableView.rowHeight = UITableView.automaticDimension
     }
     
+    func setupNavItems() {
+        
+    }
+    
     func getContacts() {
         contacts = Contacts.getContacts()
     }

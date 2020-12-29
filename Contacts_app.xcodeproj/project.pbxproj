@@ -22,6 +22,7 @@
 		B7C244CC256B38C400EB1751 /* NewContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C244CB256B38C400EB1751 /* NewContactController.swift */; };
 		B7C244D7256B46E500EB1751 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C244D6256B46E500EB1751 /* ContactListView.swift */; };
 		B7C244FF256B48E000EB1751 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C244FE256B48E000EB1751 /* ContactCell.swift */; };
+		B7E15D55259B8DFB008FFDDD /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E15D54259B8DFB008FFDDD /* NewContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B7C244CB256B38C400EB1751 /* NewContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactController.swift; sourceTree = "<group>"; };
 		B7C244D6256B46E500EB1751 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		B7C244FE256B48E000EB1751 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		B7E15D54259B8DFB008FFDDD /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C244D6256B46E500EB1751 /* ContactListView.swift */,
+				B7E15D54259B8DFB008FFDDD /* NewContactView.swift */,
 				B7C244FE256B48E000EB1751 /* ContactCell.swift */,
 				B76C6ABD2581901000E2A21C /* TableViewCell.swift */,
 			);
@@ -318,6 +321,7 @@
 				B7C244D7256B46E500EB1751 /* ContactListView.swift in Sources */,
 				B7C2448F256B380000EB1751 /* SceneDelegate.swift in Sources */,
 				B7C244FF256B48E000EB1751 /* ContactCell.swift in Sources */,
+				B7E15D55259B8DFB008FFDDD /* NewContactView.swift in Sources */,
 				B72E28102583FD5400A9ED8A /* DetailController.swift in Sources */,
 				B72E28152583FD6800A9ED8A /* FavController.swift in Sources */,
 				B7C244CC256B38C400EB1751 /* NewContactController.swift in Sources */,
