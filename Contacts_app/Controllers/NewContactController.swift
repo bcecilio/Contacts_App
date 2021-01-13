@@ -8,11 +8,17 @@
 import UIKit
 
 class NewContactController: UIViewController {
+    
+    private let createContactView = NewContactView()
+    
+//    override func loadView() {
+//        view = createContactView
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        view = createContactView
+        createContactView.backgroundColor = .systemGray2
     }
     
 

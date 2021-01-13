@@ -23,6 +23,7 @@
 		B7C244D7256B46E500EB1751 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C244D6256B46E500EB1751 /* ContactListView.swift */; };
 		B7C244FF256B48E000EB1751 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C244FE256B48E000EB1751 /* ContactCell.swift */; };
 		B7E15D55259B8DFB008FFDDD /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E15D54259B8DFB008FFDDD /* NewContactView.swift */; };
+		B7E15D5D259BCAF7008FFDDD /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E15D5C259BCAF7008FFDDD /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		B7C244D6256B46E500EB1751 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		B7C244FE256B48E000EB1751 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		B7E15D54259B8DFB008FFDDD /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
+		B7E15D5C259BCAF7008FFDDD /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				B7C244D6256B46E500EB1751 /* ContactListView.swift */,
 				B7E15D54259B8DFB008FFDDD /* NewContactView.swift */,
+				B7E15D5C259BCAF7008FFDDD /* UIImageView+Extensions.swift */,
 				B7C244FE256B48E000EB1751 /* ContactCell.swift */,
 				B76C6ABD2581901000E2A21C /* TableViewCell.swift */,
 			);
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E15D5D259BCAF7008FFDDD /* UIImageView+Extensions.swift in Sources */,
 				B7C244C7256B38A900EB1751 /* Contacts.swift in Sources */,
 				B76FC197257D4FAD008CC2EE /* TabBarController.swift in Sources */,
 				B7C24491256B380000EB1751 /* ViewController.swift in Sources */,

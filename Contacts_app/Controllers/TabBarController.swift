@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewControllers = [UINavigationController(rootViewController: viewController),UINavigationController(rootViewController: createContactController)]
+        viewControllers = [UINavigationController(rootViewController: viewController),createContactController]
     }
     
 //    let VCs = [ViewController]()
