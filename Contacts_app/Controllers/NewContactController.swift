@@ -6,14 +6,11 @@
 //
 
 import UIKit
+import AnimatedGradientView
 
 class NewContactController: UIViewController {
     
     private let createContactView = NewContactView()
-    
-//    override func loadView() {
-//        view = createContactView
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

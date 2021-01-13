@@ -1,0 +1,20 @@
+PODS:
+  - AnimatedField (2.4.4)
+  - AnimatedGradientView (3.1.0)
+
+DEPENDENCIES:
+  - AnimatedField
+  - AnimatedGradientView
+
+SPEC REPOS:
+  trunk:
+    - AnimatedField
+    - AnimatedGradientView
+
+SPEC CHECKSUMS:
+  AnimatedField: af48a2d59a50b33b30446267f7f2af274296203c
+  AnimatedGradientView: f249740238c6b491a10d505ab06bb98d897ca3a7
+
+PODFILE CHECKSUM: af6488c2d0d045e81564517236b8fdb405bfabb3
+
+COCOAPODS: 1.10.0

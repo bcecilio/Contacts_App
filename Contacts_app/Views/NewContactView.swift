@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AnimatedGradientView
 
 class NewContactView: UIView {
     
@@ -50,6 +51,16 @@ class NewContactView: UIView {
         return button
     }()
     
+    private let gradientView: AnimatedGradientView = {
+        let animatedView = AnimatedGradientView()
+        animatedView.direction = .up
+        animatedView.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
+                                        (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),
+                                        (colors: ["#003973", "#E5E5BE"], .down, .axial),
+                                        (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+        return animatedView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
@@ -61,15 +72,27 @@ class NewContactView: UIView {
     }
     
     private func commonInit() {
+        setupGradient()
         setupImage()
         setupFirstName()
         setupLastName()
         setupNumberField()
 //        setupButton()
     }
+    
+    private func setupGradient() {
+        addSubview(gradientView)
+        gradientView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            gradientView.topAnchor.constraint(equalTo: topAnchor),
+            gradientView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            gradientView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            gradientView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
 
     private func setupImage() {
-        addSubview(contactImage)
+        gradientView.addSubview(contactImage)
         contactImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             contactImage.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -80,7 +103,7 @@ class NewContactView: UIView {
     }
     
     private func setupFirstName() {
-        addSubview(firstNameField)
+        gradientView.addSubview(firstNameField)
         firstNameField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             firstNameField.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -91,7 +114,7 @@ class NewContactView: UIView {
     }
     
     private func setupLastName() {
-        addSubview(lastNameField)
+        gradientView.addSubview(lastNameField)
         lastNameField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
 //            lastNameField.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -102,7 +125,7 @@ class NewContactView: UIView {
     }
     
     private func setupNumberField() {
-        addSubview(numberField)
+        gradientView.addSubview(numberField)
         numberField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             numberField.topAnchor.constraint(equalTo: lastNameField.bottomAnchor, constant: 30),
@@ -112,7 +135,7 @@ class NewContactView: UIView {
     }
     
     private func setupButton() {
-        addSubview(createButton)
+        gradientView.addSubview(createButton)
         createButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             createButton.centerXAnchor.constraint(equalTo: centerXAnchor),
