@@ -10,7 +10,7 @@ import UIKit
 struct Contacts {
     var contactName: String
     var contactNumber: Int
-    var contactImage: UIImage
+    var contactImage: UIImage?
     
     static func getContacts() -> [Contacts] {
         let contactNames = ["James Hoffa", "Frank Sheeran", "Russel Buffalino", "Tony Salerno"]

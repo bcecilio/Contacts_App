@@ -11,11 +11,25 @@ import AnimatedGradientView
 class NewContactController: UIViewController {
     
     private let createContactView = NewContactView()
+    
+    var contact: Contacts?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = createContactView
         createContactView.backgroundColor = .systemGray2
+    }
+    
+    func createNewContact() {
+        
+        if createContactView.firstNameField.text == "" && createContactView.numberField.text == ""{
+            // !! SHOW ALERT !!
+        }
+        
+        if let newName = createContactView.firstNameField.text, let newNumber = Int(createContactView.numberField.text!){
+            let newContact = Contacts(contactName: newName, contactNumber: newNumber, contactImage: createContactView.contactImage.image)
+            contact = newContact
+        }
     }
     
 

@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     private let contactView = ContactListView()
     
-    var contacts = [Contacts]()
+    public var contacts = [Contacts]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

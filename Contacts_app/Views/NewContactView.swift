@@ -16,7 +16,7 @@ class NewContactView: UIView {
         image.contentMode = .scaleAspectFit
         image.layer.borderWidth = 1.0
         image.makeRounded()
-        image.backgroundColor = .orange
+//        image.backgroundColor = .orange
         return image
     }()
 
