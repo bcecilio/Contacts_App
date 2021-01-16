@@ -48,6 +48,8 @@ class NewContactView: UIView {
     
     public lazy var createButton: UIButton = {
         let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.setTitle("Create Contact", for: .normal)
         return button
     }()
     
@@ -55,9 +57,10 @@ class NewContactView: UIView {
         let animatedView = AnimatedGradientView()
         animatedView.direction = .up
         animatedView.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
-                                        (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),
-                                        (colors: ["#003973", "#E5E5BE"], .down, .axial),
-                                        (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+                                        (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),]
+//                                        (colors: ["#003973", "#E5E5BE"], .down, .axial),
+//                                        (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+        animatedView.autoAnimate = false
         return animatedView
     }()
     
@@ -77,7 +80,7 @@ class NewContactView: UIView {
         setupFirstName()
         setupLastName()
         setupNumberField()
-//        setupButton()
+        setupButton()
     }
     
     private func setupGradient() {
@@ -139,7 +142,7 @@ class NewContactView: UIView {
         createButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             createButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            createButton.topAnchor.constraint(equalTo: lastNameField.bottomAnchor, constant: 8),
+            createButton.topAnchor.constraint(equalTo: numberField.bottomAnchor, constant: 8),
 //            createButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
 //            createButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])

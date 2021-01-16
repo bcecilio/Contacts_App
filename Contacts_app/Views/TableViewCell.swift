@@ -18,6 +18,19 @@ class TableViewCell: UITableViewCell {
             self.numberLabel.text = String(data.contactNumber)
         }
     }
+    
+    private var ogView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 0.8, alpha: 0.4)
+        return view
+    }()
+    
+    private var blurView: UIVisualEffectView = {
+        let blur = UIBlurEffect(style: .light)
+        let effect = UIVisualEffectView(effect: blur)
+//        effect.frame = ogView.bounds
+        return effect
+    }()
 
     public lazy var nameLabel: UILabel = {
         let label = UILabel()
@@ -37,11 +50,6 @@ class TableViewCell: UITableViewCell {
         return image
     }()
     
-//    override var intrinsicContentSize: CGSize {
-//        let height = min(contentSize.height, maxHeight)
-//        return CGSize(width: contentSize.width, height: height)
-//      }
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
@@ -53,13 +61,37 @@ class TableViewCell: UITableViewCell {
     }
     
     private func commonInit() {
+        setupView()
+        setupblur()
         setupImage()
         setupName()
         setupNumber()
     }
     
+    private func setupView() {
+        addSubview(ogView)
+        ogView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            ogView.topAnchor.constraint(equalTo: topAnchor),
+            ogView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            ogView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            ogView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
+    
+    private func setupblur() {
+        ogView.addSubview(blurView)
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            blurView.topAnchor.constraint(equalTo: topAnchor),
+            blurView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            blurView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            blurView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
+    
     private func setupImage() {
-        addSubview(contactPicture)
+        ogView.addSubview(contactPicture)
         contactPicture.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
 //            contactPicture.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -71,7 +103,7 @@ class TableViewCell: UITableViewCell {
     }
     
     private func setupName() {
-        addSubview(nameLabel)
+        ogView.addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -81,7 +113,7 @@ class TableViewCell: UITableViewCell {
     }
     
     private func setupNumber() {
-        addSubview(numberLabel)
+        ogView.addSubview(numberLabel)
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             numberLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 1),

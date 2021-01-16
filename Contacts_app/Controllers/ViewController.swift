@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view = contactView
         contactView.backgroundColor = .systemOrange
+        navigationItem.leftBarButtonItem?.image = UIImage(systemName: "plus")
         setupTableView()
         getContacts()
     }
@@ -50,6 +51,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         let newContacts = contacts[indexPath.row]
         cell.configureCell(with: newContacts)
+        cell.layer.cornerRadius = 8
+        cell.layer.masksToBounds = true
         return cell
     }
     
