@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let contactView = ContactListView()
+    public let contactView = ContactListView()
     
     public var contacts = [Contacts]()
 

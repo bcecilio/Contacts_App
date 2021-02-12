@@ -10,7 +10,7 @@ import AnimatedGradientView
 
 class NewContactController: UIViewController {
     
-    private let createContactView = NewContactView()
+    @objc private let createContactView = NewContactView()
     
     var contact: Contacts?
 
@@ -18,17 +18,23 @@ class NewContactController: UIViewController {
         super.viewDidLoad()
         view = createContactView
         createContactView.backgroundColor = .systemGray2
+        createContactView.createButton.addTarget(self, action: #selector(createNewContact(_:)), for: .touchUpInside)
     }
     
-    func createNewContact() {
-        
+    @objc func createNewContact(_ sender: UIButton) {
+        print("working segue")
         if createContactView.firstNameField.text == "" && createContactView.numberField.text == ""{
             // !! SHOW ALERT !!
         }
-        
-        if let newName = createContactView.firstNameField.text, let newNumber = Int(createContactView.numberField.text!){
+
+        if let newName = createContactView.firstNameField.text, let newNumber = Int(createContactView.numberField.text!) {
             let newContact = Contacts(contactName: newName, contactNumber: newNumber, contactImage: createContactView.contactImage.image)
-            contact = newContact
+            let vc = ViewController()
+            print(vc.contacts.count)
+            vc.contacts.insert(newContact, at: 0)
+            let indexPath = IndexPath(row: 0, section: 0)
+            vc.contactView.tableView.insertRows(at: [indexPath], with: .automatic)
+            print("new count: \(vc.contacts.count)")
         }
     }
     
